@@ -31,8 +31,9 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
 button:hover {
   border-color: #646cff;
@@ -55,6 +56,35 @@ button:focus-visible {
   }
 }
 
+hr {
+  width: 85%;
+  opacity: 0.5;
+}
+
+.cv_main {
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: .3%;
+  width: 100%;
+  height: 100%;
+}
+
+.cv__first {
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+  background-color: #953B2C;
+  width: 40%;
+  font-size: .7em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.cv__first > .resume {
+  align-self: center;
+}
+
+
 .container {
   display: flex;
   height: 100vh;
@@ -64,24 +94,110 @@ button:focus-visible {
 
 .cv__preview {
   width: 40%;
-  gap: 10px;
+  padding: 20px;
+  gap: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  border-left: 1px solid #646cff34;
+  border-radius: 0 4% 4% 0;
+  overflow-y: auto;
 }
 
 .cv__form {
   overflow-y: auto;
-  width: 40%;
-  padding: 25px 125px;
+  width: 55%;
+  padding: 25px;
   display: flex;
+  align-items: center;
   flex-direction: column;
+  gap: 25px;
   border-right: 1px solid #646cff34;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 4%;
 }
 
-input {
-  width: 250px;
+label {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  margin: 0;
+}
+
+.photo {
+  min-width: 125px;
+  height: 125px;
+  background-color: antiquewhite;
+}
+
+input { 
+  padding: 10px;
+  height: 25px;
+  background-color: rgba(128, 128, 128, 0.432);
+  border: 1px solid #cccccc13;
+  border-radius: 4px;
+}
+
+h2:not(.cv__form > h2) {
+  color: #ffffff 
 }
 
 h3 {
+  margin: 0;
   color: #8e8e99bd;
+  font-size: 16px;
+}
+
+.personal__1 {
+  display: flex;
+  width: auto;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.personal__first {
+  display: flex;
+  gap: 5%;
+  flex-direction: row;
+  height: 100%;
+  width: 500px;
+}
+
+.personal__first__label {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.personal__second {
+  display: flex;
+  height: 100%;
+}
+
+.small {
+  min-width: 250px;
+}
+
+.big {
+  min-width: 550px;
+}
+
+
+.personal__2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal__third {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.personal__third__input {
+  min-width: 690px;
 }

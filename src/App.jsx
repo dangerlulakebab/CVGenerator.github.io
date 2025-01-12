@@ -5,6 +5,10 @@ import CVPreview from './components/CVPreview';
 function App() {
   const [cvData, setCvData] = useState({
     name: "",
+    name2: "",
+    headline: "",
+    emailAddress: "",
+    phoneNumber: "",
     email: "",
     phone: "",
     education: "",
