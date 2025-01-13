@@ -11,6 +11,8 @@ const CVPreview = ({ cvData }) => {
                     <h2 className="resume">{cvData.headline}</h2>
 
                     <hr />
+
+
                     <div style={{display: 'flex', flexDirection: "row"}}>
                         <h2>{cvData.name}</h2> 
                         <>&nbsp;</>

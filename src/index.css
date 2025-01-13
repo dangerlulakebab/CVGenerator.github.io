@@ -14,7 +14,7 @@
 }
 
 body {
-  overflow-y: hidden;
+  overflow: auto;
   margin: 0;
 }
 
@@ -57,7 +57,7 @@ button:focus-visible {
 }
 
 hr {
-  width: 85%;
+  width: 100%;
   opacity: 0.5;
 }
 
@@ -67,17 +67,24 @@ hr {
   border-radius: .3%;
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 .cv__first {
   display: flex;
   flex-direction: column;
   text-wrap: wrap;
+  line-height: 40px;
+  padding: 0 25px;
   background-color: #953B2C;
   width: 40%;
   font-size: .7em;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+.cv__first > h2 {
+  margin: 0;
 }
 
 .cv__first > .resume {
@@ -87,33 +94,34 @@ hr {
 
 .container {
   display: flex;
-  height: 100vh;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .cv__preview {
   width: 40%;
-  padding: 20px;
+  height: 100vh;
+  padding: 3%;
+  padding-bottom: 100px;
+  padding-top: 20px;
   gap: 20px;
   background-color: #1a1a1a;
   color: white;
-  border-left: 1px solid #646cff34;
   border-radius: 0 4% 4% 0;
-  overflow-y: auto;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 .cv__form {
-  overflow-y: auto;
   width: 55%;
-  padding: 25px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: sticky;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 25px;
-  border-right: 1px solid #646cff34;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 4%;
+  overflow-y: scroll;
 }
 
 label {
@@ -194,10 +202,10 @@ h3 {
 .personal__third {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 }
 
 .personal__third__input {
-  min-width: 690px;
+  min-width: 330px;
 }
