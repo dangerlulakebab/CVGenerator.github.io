@@ -56,7 +56,7 @@ const CVForm = ({ cvData, setCvData }) => {
                 <form>
                     <label>
                         <div className='personal__third'>
-                            <div className="input__container">
+                            <div className="input__container third">
                                 {/* <h3>Family name</h3> */}
                                 <input 
                                     className="personal__third__input"
@@ -74,6 +74,31 @@ const CVForm = ({ cvData, setCvData }) => {
                                     name="phoneNumber"
                                     placeholder='Phone Number'
                                     value={cvData.phoneNumber}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </div>
+                        <div className="personal__fourth">
+                            <div className="input__container">
+                                {/* <h3>Family name</h3> */}
+                                <input 
+                                    className="personal__fourth__input"
+                                    name="website"
+                                    placeholder='website'
+                                    value={cvData.website}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </div>
+                        <div className="personal__fifth">
+                            <div className="input__container">
+                                {/* <h3>Family name</h3> */}
+                                <textarea
+                                    maxLength={600}
+                                    className="personal__fourth__input"
+                                    name="skills"
+                                    placeholder='skills'
+                                    value={cvData.skills}
                                     onChange={handleChange}
                                 />
                             </div>

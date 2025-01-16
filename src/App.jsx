@@ -9,9 +9,7 @@ function App() {
     headline: "",
     emailAddress: "",
     phoneNumber: "",
-    email: "",
-    phone: "",
-    education: "",
+    website: "",
     skills: "",
   });
 
