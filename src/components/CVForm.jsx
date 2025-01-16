@@ -6,6 +6,18 @@ const CVForm = ({ cvData, setCvData }) => {
         setCvData({ ...cvData, [name]: value });
     }
 
+    function loadtest() {
+        setCvData({ ...cvData, name: "John", 
+                               name2: "Wick",
+                               headline: "jobless",
+                               emailAddress: "user@gmail.com",
+                               phoneNumber: "+0123456789",
+                               website: "website.com",
+                               skills: "Microsoft Office (Word, Excel, PowerPoint), Basic Programming (e.g., Python, JavaScript, HTML/CSS), Data Entry, Email Management (Outlook, Gmail), Web Browsing and Research, Typing Speed (e.g., 50+ WPM), Active Listening, Clear Written Communication, Verbal Presentation Skills, Basic Public Speaking, Interpersonal Skills, Conflict Resolution, Team Player, Collaboration with Cross-Functional Teams, Basic Leadership Skills, Ability to Work Under Supervision, Time Management in Team Projects"
+        })
+    }
+
+
     return(
         <div className='cv__form'>
             <h2>Personal Information</h2>
@@ -106,13 +118,15 @@ const CVForm = ({ cvData, setCvData }) => {
                     </label>
                 </form>
             </div>
+            <div className='nav'>
+                    <button onClick={loadtest}>Load-test</button>                </div>
         </div>
     );
 };
 
 CVForm.propTypes= {
     cvData: propTypes.object.isRequired,
-    setCvData: propTypes.object.isRequired
+    setCvData: propTypes.func.isRequired
 }
 
 export default CVForm;

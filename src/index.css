@@ -123,6 +123,7 @@ hr {
   border-radius: 0 4% 4% 0;
   overflow: auto;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 .cv__form {
@@ -280,4 +281,23 @@ textarea {
   font-size: 1.5em;
   overflow-wrap: break-word;
   margin: 0;
+}
+
+.preview__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  position: absolute;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25%;
+  background-color: #1D1D20;
+  border-radius: 10px;
+  width: 50%;
+  height: 75px;
 }
